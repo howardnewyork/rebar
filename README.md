@@ -1,6 +1,6 @@
 # CONCRETE and REBAR:  Modeling Discrete Random Variables in Stan
 
-The CONCRETE and REBAR distributions are continuous distributions that approximate a discrete categorical distribution where the categories are described in a one-hot encoding vector style.  The distributions are derived as a reparametierzation of a Uniform to a Gumbel to a CONCRETE / REBAR distrbution. Since Stan has a Gumbel distribution, it is possible to go straight from Gumbel to REBAR.  Since these are continous distributions, they can be incorporated in Stan as parameters, even they produce values that are (very) close to being discrete.
+The CONCRETE and REBAR distributions are continuous distributions that approximate a discrete categorical distribution where the categories are described in a one-hot encoding vector style.  The distributions are derived as a reparameterization of a Uniform to a Gumbel to a CONCRETE / REBAR distrbution. Since Stan has a Gumbel distribution, it is possible to go straight from Gumbel to REBAR.  Since these are continous distributions, they can be incorporated in Stan as parameters, even they produce values that are (very) close to being discrete.
 
 As an example, if we are trying to model a categorical parameter with 2 options, this can be encoded as:
 - Category 1:  [1 0]
