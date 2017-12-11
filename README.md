@@ -37,7 +37,7 @@ A good blog post can also be found here:
   
   Rebar can also be used for automatic feature selection.   If you are conducting regression and have D features for each data point, that is the inputs to the model are x, where x is an NxD matrix, and one_hot is a Dx2 matrix where each row has a Rebar distribution, then we can model the output, y, as 
   
-  y ~ normal(x * one_hot\[,1\], sigma);
+  y ~ normal(x * one_hot\[,2\], sigma);
   
   That is, the second column of the one_hot matrix will be close to 1 or zero, where 1 represents a feature that produces a signal and 0 represents a feature that produces no signal.
   
