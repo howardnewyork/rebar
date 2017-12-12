@@ -96,11 +96,14 @@ if (T){
   errors = data.frame(A = A_vec, mse = mse, mse_2 = mse_2)
   print(errors)
   write.csv(errors, file = "errors_sparse_example.csv")
+  #erorrs=errors[1:6,]
   errors_plot = errors %>%
     gather(error, value, -A)
-  
+  #errors=errors[1:6,]
   print(ggplot(errors_plot) + geom_line(aes(A, value, color = error)) + labs(title = "MSE of (i) beta and (ii) beta .* one_hot[,2]", y="Error"))
-    
+  print(ggplot(errors) + geom_line(aes(A, mse_2)) + labs(title = "MSE of  beta .* one_hot", y="Error", x="A") + 
+    scale_x_continuous(breaks= 1:6))
+  
   
   
 
